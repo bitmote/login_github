@@ -31,8 +31,8 @@ class LoginSpider(scrapy.Spider):
             'commit': 'Sign in',
             'utf8':'✓',
             'authenticity_token':token,
-            'login':'bitmote',
-            'password':'github2017'
+            'login':'your id',
+            'password':'your password'
         }
         return [scrapy.FormRequest(url=self.session_url, formdata=post_data, headers=self.headers, callback=self.check_login)]
 
