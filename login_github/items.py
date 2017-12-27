@@ -6,9 +6,13 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
-
+import json
+import codecs
 
 class LoginGithubItem(scrapy.Item):
+
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    #先不考虑去重
+    full_name = scrapy.Field()
+    additional_name = scrapy.Field()
+
